@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Intelligent Meal Planner (DB Version)</title>
+    
+    <!-- This is the crucial part that links your other files -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+
+    <div class="container">
+      <header>
+        <h1>My Intelligent Meal Planner</h1>
+        <p>A custom South Indian meal plan with advanced rules, powered by Google Sheets.</p>
+      </header>
+      
+      <main>
+        <fieldset class="planner-options">
+          <legend>Planner Options</legend>
+          <div class="option-group">
+            <div class="option">
+              <label for="leftovers-checkbox">
+                <input type="checkbox" id="leftovers-checkbox" checked>
+                Use Sunday's dinner as Monday's lunch leftovers?
+              </label>
+            </div>
+            <div class="option">
+              <label for="tiffin-night-select">"Tiffin for Dinner" Night:</label>
+              <select id="tiffin-night-select">
+                <option value="None">None</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday" selected>Thursday</option>
+                <option value="Friday">Friday</option>
+              </select>
+            </div>
+            <div class="option">
+              <label for="quick-day-select">Busy Day (Quick Dinner):</label>
+              <select id="quick-day-select">
+                <option value="None">None</option>
+                <option value="Monday" selected>Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+              </select>
+            </div>
+            <div class="option">
+              <label for="avoid-ingredient-input">Avoid an Ingredient:</label>
+              <input type="text" id="avoid-ingredient-input" placeholder="e.g., Mushroom, Paneer">
+            </div>
+          </div>
+        </fieldset>
+    
+        <button id="generate-button">✨ Generate My Smart Week ✨</button>
+    
+        <div id="weekly-planner-container">
+          <p class="placeholder">Set your options above and click the button to begin!</p>
+        </div>
+    
+        <div id="shopping-list-container">
+          <h2>Your Weekly Shopping List</h2>
+          <h3 id="total-cost"></h3>
+          <ul id="shopping-list"></ul>
+        </div>
+      </main>
+      
+      <footer>
+        <p>Built just for you.</p>
+      </footer>
+    </div>
+
+</body>
+</html>
